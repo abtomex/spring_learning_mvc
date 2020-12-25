@@ -1,4 +1,4 @@
-package ru.specialist.controllers;
+package ru.specialist.controllers.course;
 
 import java.util.List;
 
@@ -17,8 +17,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.validation.BindingResult;
 import javax.servlet.http.HttpServletRequest;
 
-import ru.specialist.DAO.CourseService;
-import ru.specialist.DAO.Course;
+import ru.specialist.DAO.course.CourseService;
+import ru.specialist.DAO.course.Course;
 
 @Controller
 @RequestMapping("/courses/")
@@ -42,7 +42,7 @@ public class CourseController {
 	}
 	
 	//@PreAuthorize("isAuthenticated()")
-	@PreAuthorize("hasRole('ROLE_USER')")
+//	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(value = "delete/{id}",method = RequestMethod.GET)
 	public String delete(@PathVariable("id") int id, Model uiModel) {
 		if (courseService.findById(id)!=null)
@@ -61,7 +61,7 @@ public class CourseController {
 	}
 	
 	//@PreAuthorize("isAuthenticated()")
-	@PreAuthorize("hasRole('ROLE_USER')")
+//	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(value = "update/{id}", method = RequestMethod.POST)
 	public String update(Course course, BindingResult bindingResult,
 				Model uiModel, HttpServletRequest httpServletRequest,
