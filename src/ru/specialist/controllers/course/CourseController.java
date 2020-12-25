@@ -1,4 +1,4 @@
-package ru.specialist.controllers;
+package ru.specialist.controllers.course;
 
 import java.util.List;
 
@@ -17,8 +17,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.validation.BindingResult;
 import javax.servlet.http.HttpServletRequest;
 
-import ru.specialist.DAO.CourseService;
-import ru.specialist.DAO.Course;
+import ru.specialist.DAO.course.CourseService;
+import ru.specialist.DAO.course.Course;
 
 @Controller
 @RequestMapping("/courses/")

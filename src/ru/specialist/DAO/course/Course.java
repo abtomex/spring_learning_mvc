@@ -1,4 +1,6 @@
-package ru.specialist.DAO;
+package ru.specialist.DAO.course;
+
+import ru.specialist.DAO.base.BaseEnity;
 
 import java.io.Serializable;
 
@@ -18,21 +20,11 @@ import javax.persistence.Column;
 
 @Entity
 @Table(name="courses")
-public class Course implements Serializable {
-	private int id;
+public class Course extends BaseEnity implements Serializable {
 	private String title;
 	private int length;
 	private String description;
-	 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column (name = "id") 
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	@Column (name = "title") 
 	public String getTitle() {
 		return title;

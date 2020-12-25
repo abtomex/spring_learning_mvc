@@ -1,4 +1,4 @@
-package ru.specialist.controllers;
+package ru.specialist.controllers.course;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

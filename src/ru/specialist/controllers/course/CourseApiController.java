@@ -1,4 +1,4 @@
-package ru.specialist.controllers;
+package ru.specialist.controllers.course;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ru.specialist.DAO.CourseService;
-import ru.specialist.DAO.Course;
+import ru.specialist.DAO.course.CourseService;
+import ru.specialist.DAO.course.Course;
 
 @Controller
 @RequestMapping("api/course")
