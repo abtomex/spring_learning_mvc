@@ -10,7 +10,6 @@
 </head>
 <body>
 	<h1>Преподаватели</h1>
-	<%--
         <div id="userinfo">
             <s:authorize access="isAuthenticated()">Привет,
                 <s:authentication property="principal.username" />!
@@ -29,33 +28,32 @@
 			<input type="submit" name="submit" value="Войти">
 		</form>
 	</s:authorize>
---%>
 	<c:if test="${not empty teachers}">
 		<table border="1">
 			<tr>
 				<td>Имя</td>
 				<td>Адрес</td>
 				<td>Телефон</td>
-<%--				<s:authorize access="hasRole('ROLE_USER')">--%>
+				<s:authorize access="hasRole('ROLE_USER')">
 					<td></td>
 					<td></td>
-<%--				</s:authorize>--%>
+				</s:authorize>
 			</tr>
 			<c:forEach items="${teachers}" var="teacher">
 				<tr>
 					<td>${teacher.name}</td>
 					<td>${teacher.addr}</td>
 					<td>${teacher.phone}</td>
-<%--					<s:authorize access="hasRole('ROLE_USER')">--%>
+					<s:authorize access="hasRole('ROLE_USER')">
 						<td><a href="update/${teacher.id}">Изменить</a></td>
 						<td><a href="delete/${teacher.id}">Удалить</a></td>
-<%--					</s:authorize>--%>
+					</s:authorize>
 				</tr>
 			</c:forEach>
 		</table>
 	</c:if>
-<%--	<s:authorize access="hasRole('ROLE_USER')">--%>
+	<s:authorize access="hasRole('ROLE_USER')">
 		<a href="update/0">Добавить...</a>
-<%--	</s:authorize>--%>
+	</s:authorize>
 </body>
 </html>

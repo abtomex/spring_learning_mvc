@@ -1,14 +1,27 @@
 package ru.specialist.DAO.teacher;
 
-import ru.specialist.DAO.base.BaseEnity;
+import ru.specialist.DAO.base.BaseEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "teachers")
-public class Teacher extends BaseEnity {
+@SequenceGenerator(name = "generator", sequenceName = "teachers_id_seq", initialValue = 1, allocationSize = 1)
+public class Teacher extends BaseEntity {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = SEQUENCE, generator = "generator")
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Column(name = "name")
     private String name;
@@ -40,4 +53,5 @@ public class Teacher extends BaseEnity {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }

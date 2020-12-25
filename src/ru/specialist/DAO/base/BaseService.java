@@ -1,10 +1,8 @@
 package ru.specialist.DAO.base;
 
-import ru.specialist.DAO.course.Course;
-
 import java.util.List;
 
-public interface BaseService<T extends BaseEnity> {
+public interface BaseService<T extends BaseEntity> {
 
     List<T> findAll();
     T findById(int id);

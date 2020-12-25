@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public abstract class BaseServiceImpl<T extends BaseEnity> implements BaseService<T> {
+public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
 
     protected abstract IRepository<T> getRepository();
 

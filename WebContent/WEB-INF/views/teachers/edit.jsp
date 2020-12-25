@@ -29,11 +29,11 @@
 			</div>
 			<div>
 				<label for="addr">Адрес: </label>
-				<input  id="addr" type="number" name="length" value="${teacher.addr}">
+				<input id="addr" type="text" name="addr" value="${teacher.addr}">
 			</div>
 			<div>
 				<label for="phone">Телефон: </label>
-				<textarea id="phone" name="description" rows="7">${teacher.phone}</textarea>
+				<input id="phone" type="text" name="phone" value="${teacher.phone}"/>
 			</div>
 			<div>
 				<input type="submit" value="Сохранить">

@@ -42,7 +42,7 @@ public class CourseController {
 	}
 	
 	//@PreAuthorize("isAuthenticated()")
-	@PreAuthorize("hasRole('ROLE_USER')")
+//	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(value = "delete/{id}",method = RequestMethod.GET)
 	public String delete(@PathVariable("id") int id, Model uiModel) {
 		if (courseService.findById(id)!=null)
@@ -61,7 +61,7 @@ public class CourseController {
 	}
 	
 	//@PreAuthorize("isAuthenticated()")
-	@PreAuthorize("hasRole('ROLE_USER')")
+//	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(value = "update/{id}", method = RequestMethod.POST)
 	public String update(Course course, BindingResult bindingResult,
 				Model uiModel, HttpServletRequest httpServletRequest,
